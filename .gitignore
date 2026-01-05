@@ -9,6 +9,7 @@ Thumbs.db
 .DS_Store
 *.tsbuildinfo
 **/package-lock.json
+pnpm-lock.yaml
 
 # Folders
 node_modules
@@ -24,16 +25,14 @@ dist/
 logs
 *.log
 npm-debug.log*
+pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pids
-*.pid
-*.seed
-*.pid.lock
 
 .idea
-
-
 analyze
 .env
 .vscode
+
+#11ty
+**/_site/
