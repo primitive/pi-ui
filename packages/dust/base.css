@@ -1,0 +1,148 @@
+/* -----------------------------------------------------------
+   @pi-ui/dust/base.css · OPTIONAL ←
+   Baseline css styles.
+   Reset + defaults ← a starter, not a requirement
+----------------------------------------------------------- */
+
+@import "./tokens.css";
+
+/* -----------------------------------------------------------
+   Reset / normalise-lite
+----------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--pi-font-base);
+  font-size: var(--pi-text-m);
+  line-height: var(--pi-line-height);
+  background: var(--pi-color-bg);
+  color: var(--pi-color-fg);
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* -----------------------------------------------------------
+   Typography defaults
+----------------------------------------------------------- */
+
+h1 {
+  font-size: var(--pi-text-2xl);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: var(--pi-text-xl);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: var(--pi-text-l);
+  font-weight: 600;
+}
+
+small {
+  font-size: var(--pi-text-s);
+  color: var(--pi-color-muted);
+}
+
+p + p {
+  margin-top: var(--pi-space-m);
+}
+
+a {
+  color: var(--pi-color-accent);
+  text-decoration-thickness: from-font;
+  text-underline-offset: 0.15em;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* -----------------------------------------------------------
+   Layout helpers (optional utilities)
+----------------------------------------------------------- */
+
+.pi-container {
+  width: min(100% - var(--pi-space-l), var(--pi-max-width));
+  margin-inline: auto;
+}
+
+.pi-stack > * + * {
+  margin-top: var(--pi-space-m);
+}
+
+.pi-inline {
+  display: flex;
+  align-items: center;
+  gap: var(--pi-space-m);
+}
+
+.pi-grid {
+  display: grid;
+  gap: var(--pi-space-l);
+}
+
+.pi-grid-auto {
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.pi-columns {
+  columns: 2;
+  column-gap: var(--pi-space-l);
+}
+
+@media (max-width: var(--pi-bp-m)) {
+  .pi-columns {
+    columns: 1;
+  }
+}
+
+/* -----------------------------------------------------------
+   Minimal primitives (temporary; likely move to pebbles)
+----------------------------------------------------------- */
+
+.pi-card {
+  background: var(--pi-color-bg);
+  border-radius: var(--pi-radius-m);
+  padding: var(--pi-space-l);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+button,
+.pi-btn {
+  display: inline-block;
+  padding: var(--pi-space-s) var(--pi-space-m);
+  border-radius: var(--pi-radius-m);
+  background: var(--pi-color-accent);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover,
+.pi-btn:hover {
+  background: var(--pi-color-accent-soft);
+  color: var(--pi-color-fg);
+}

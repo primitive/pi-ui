@@ -1,0 +1,15 @@
+{
+  "name": "@pi-ui/dust",
+  "version": "0.1.0",
+  "description": "",
+  "type": "module",
+  "style": "base.css",
+  "files": [
+    "tokens.css",
+    "base.css"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.27.0"
+}
