@@ -1,0 +1,23 @@
+{
+  "name": "pi-ui",
+  "private": true,
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "pnpm -r run build",
+    "dev": "pnpm -r run dev",
+    "lint": "pnpm -r run lint",
+    "test": "pnpm -r run test"
+  },
+  "keywords": [
+    "web-components",
+    "custom-elements",
+    "react",
+    "ui",
+    "pi-ui"
+  ],
+  "author": "Primitive Industries",
+  "license": "MIT",
+  "packageManager": "pnpm@10.27.0"
+}
