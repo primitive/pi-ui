@@ -1,6 +1,6 @@
 {
   "name": "@pi-ui/dust",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "",
   "type": "module",
   "style": "base.css",
@@ -8,8 +8,14 @@
     "tokens.css",
     "base.css"
   ],
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "web-components",
+    "custom-elements",
+    "react",
+    "ui",
+    "pi-ui"
+  ],
+  "author": "Primitive Industries",
+  "license": "MIT",
   "packageManager": "pnpm@10.27.0"
 }
