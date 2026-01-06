@@ -1,0 +1,48 @@
+:host {
+  /* Component tokens (public API) */
+  --pi-btn-bg: var(--pi-colour-accent);
+  --pi-btn-fg: #ffffff;
+  --pi-btn-bg-hover: var(--pi-colour-accent-soft);
+  --pi-btn-fg-hover: var(--pi-colour-fg);
+
+  --pi-btn-radius: var(--pi-radius-m);
+  --pi-btn-pad-y: var(--pi-space-s);
+  --pi-btn-pad-x: var(--pi-space-m);
+
+  --pi-btn-font-size: var(--pi-text-m);
+  --pi-btn-font-weight: 600;
+
+  display: inline-block;
+}
+
+button {
+  appearance: none;
+  border: none;
+  border-radius: var(--pi-btn-radius);
+  padding: var(--pi-btn-pad-y) var(--pi-btn-pad-x);
+
+  background: var(--pi-btn-bg);
+  color: var(--pi-btn-fg);
+
+  font-size: var(--pi-btn-font-size);
+  font-weight: var(--pi-btn-font-weight);
+  font-family: inherit;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: var(--pi-btn-bg-hover);
+  color: var(--pi-btn-fg-hover);
+}
+
+button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--pi-colour-accent-soft);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
