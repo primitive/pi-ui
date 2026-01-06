@@ -18,7 +18,8 @@
   "sideEffects": true,
 
   "scripts": {
-    "build": "tsup"
+    "build": "tsup",
+    "dev": "tsup --watch"
   },
 
   "keywords": [
