@@ -21,7 +21,6 @@
   "license": "MIT",
   "packageManager": "pnpm@10.27.0",
   "devDependencies": {
-    "esbuild-plugin-inline-import": "^1.1.0",
     "tsup": "^8.5.1",
     "typescript": "^5.9.3"
   }
