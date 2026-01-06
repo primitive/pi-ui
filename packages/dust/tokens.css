@@ -12,8 +12,86 @@
   --pi-color-fg: #1a1a1a;
   --pi-color-muted: #666666;
 
-  --pi-color-accent: #0066cc;
-  --pi-color-accent-soft: #cce6ff;
+  --pi-color-dark: #061E29;
+  --pi-color-light: #F3F4F4;
+
+  /* Document Hex values */
+  --pi-color-base-hex: #1D546D;
+  --pi-color-alt-hex: #5F9598;
+  --pi-color-accent-hex: #E1AB91;
+
+  /* Convert Hex to OKLCH values */
+  /* OKLCH lightness is perceptual, changing L is a reliable way to generate a tint/shade  */
+   --pi-color-base-l: 36%;
+   --pi-color-base-c: 0.10;
+   --pi-color-base-h: 235;
+
+   --pi-color-alt-l: 58%;
+   --pi-color-alt-c: 0.07;
+   --pi-color-alt-h: 195;
+
+   --pi-color-accent-l: 76%;
+   --pi-color-accent-c: 0.10;
+   --pi-color-accent-h: 55;
+
+  /* Theme Colors */
+   --pi-color-base: oklch(
+      var(--pi-color-base-l)
+      var(--pi-color-base-c)
+      var(--pi-color-base-h)
+   );
+
+   --pi-color-alt: oklch(
+      var(--pi-color-alt-l)
+      var(--pi-color-alt-c)
+      var(--pi-color-alt-h)
+   );
+
+   --pi-color-accent: oklch(
+      var(--pi-color-accent-l)
+      var(--pi-color-accent-c)
+      var(--pi-color-accent-h)
+   );
+
+  /* Base Color Variants */
+   --pi-color-base-light: oklch(
+      calc(var(--pi-color-base-l) + 12%)
+      calc(var(--pi-color-base-c) * 0.7)
+      var(--pi-color-base-h)
+   );
+
+   --pi-color-base-dark: oklch(
+      calc(var(--pi-color-base-l) - 10%)
+      var(--pi-color-base-c)
+      var(--pi-color-base-h)
+   );
+
+   /* Alt Color Variants */
+   --pi-color-alt-light: oklch(
+      calc(var(--pi-color-alt-l) + 12%)
+      calc(var(--pi-color-alt-c) * 0.7)
+      var(--pi-color-alt-h)
+   );
+
+   --pi-color-alt-dark: oklch(
+      calc(var(--pi-color-alt-l) - 10%)
+      var(--pi-color-alt-c)
+      var(--pi-color-alt-h)
+   );
+
+   --pi-color-accent-light: oklch(
+      calc(var(--pi-color-accent-l) + 12%)
+      calc(var(--pi-color-accent-c) * 0.7)
+      var(--pi-color-accent-h)
+   );
+
+   --pi-color-accent-dark: oklch(
+      calc(var(--pi-color-accent-l) - 10%)
+      var(--pi-color-accent-c)
+      var(--pi-color-accent-h)
+   );
+
+
 
   /* ---------------------------------------------------------
      Typography tokens
@@ -30,6 +108,7 @@
   --pi-text-xl: clamp(1.75rem, 1.5rem + 1.2vw, 2.75rem);
   --pi-text-2xl: clamp(2.5rem, 2rem + 2vw, 4rem);
 
+  
   /* ---------------------------------------------------------
      Spacing tokens (golden ratio inspired)
   --------------------------------------------------------- */
