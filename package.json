@@ -19,5 +19,9 @@
   ],
   "author": "Primitive Industries",
   "license": "MIT",
-  "packageManager": "pnpm@10.27.0"
+  "packageManager": "pnpm@10.27.0",
+  "devDependencies": {
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  }
 }
