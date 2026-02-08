@@ -134,7 +134,7 @@ button,
   display: inline-block;
   padding: var(--pi-space-s) var(--pi-space-m);
   border-radius: var(--pi-radius-m);
-  background: var(--pi-color-accent);
+  background: var(--pi-color-base);
   color: #ffffff;
   border: none;
   cursor: pointer;
@@ -143,6 +143,6 @@ button,
 
 button:hover,
 .pi-btn:hover {
-  background: var(--pi-color-accent-soft);
+  background: var(--pi-color-base-dark);
   color: var(--pi-color-fg);
 }
