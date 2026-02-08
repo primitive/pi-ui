@@ -1,0 +1,34 @@
+// import ".button/button.css";
+
+:host {
+  /* Component tokens (public API) */
+  --pi-btn-bg: var(--pi-colour-accent);
+  --pi-btn-fg: #ffffff;
+  --pi-btn-bg-hover: var(--pi-colour-accent-soft);
+  --pi-btn-fg-hover: var(--pi-colour-fg);
+
+  --pi-btn-radius: var(--pi-radius-m);
+  --pi-btn-pad-y: var(--pi-space-s);
+  --pi-btn-pad-x: var(--pi-space-m);
+
+  --pi-btn-font-size: var(--pi-text-m);
+  --pi-btn-font-weight: 600;
+
+  display: inline-block;
+}
+
+pi-button::part(button) {
+  appearance: none;
+  border: none;
+  border-radius: var(--pi-radius-m);
+  padding: var(--pi-space-s) var(--pi-space-m);
+  background: var(--pi-colour-accent);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+pi-button[disabled]::part(button) {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
